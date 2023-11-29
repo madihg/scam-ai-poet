@@ -45,7 +45,7 @@ export default function Chat() {
           <VercelIcon />
         </a>
         <a
-          href="https://github.com/steven-tey/shooketh"
+          href="https://github.com/madihg/scam-ai-poet"
           target="_blank"
           className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
         >
