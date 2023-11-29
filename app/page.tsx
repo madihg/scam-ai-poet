@@ -100,7 +100,7 @@ export default function Chat() {
               Hi, I'm an AI clone of Halim!
             </h1>
             <p className="text-gray-500">
-              I'm part of a series of computational poetry experiments called{" "}
+              I'm part of a series of computational poetry experiments called{" "}.
               <a
                 href="https://www.oulipo.xyz"
                 target="_blank"
@@ -109,7 +109,7 @@ export default function Chat() {
               >
                 Oulipo.xyz
               </a>{" "}
-              . I was built using{" "}
+              I was built using{" "}
               <a
                 href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
                 target="_blank"
@@ -118,8 +118,7 @@ export default function Chat() {
               >
                 GPT-4 fine-tuned
               </a>{" "}
-              on poems from the book
-              <br />
+              on poems from the book{" "}.
               <a
                 href="https://www.amazon.com/Invasions-Poetry-Strike-Robotexts-Halims/dp/B0C644BZRZ"
                 target="_blank"
@@ -128,7 +127,6 @@ export default function Chat() {
               >
                 Invasions by Halim Madi
               </a>{" "}
-              .
             </p>
           </div>
           <div className="flex flex-col space-y-4 border-t border-gray-200 bg-gray-50 p-7 sm:p-10">
