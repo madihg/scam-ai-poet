@@ -108,7 +108,7 @@ export default function Chat() {
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
                 Oulipo.xyz
-              </a>{" "}.
+              </a>.
               I was built using{" "}
               <a
                 href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
@@ -126,7 +126,7 @@ export default function Chat() {
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
                 Invasions by Halim
-              </a>{" "}.
+              </a>.
             </p>
           </div>
           <div className="flex flex-col space-y-4 border-t border-gray-200 bg-gray-50 p-7 sm:p-10">
@@ -190,6 +190,36 @@ export default function Chat() {
             )}
           </button>
         </form>
+        <p className="text-center text-xs text-gray-400">
+          Built with{" "}
+          <a
+            href="https://sdk.vercel.ai/docs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-black"
+          >
+            Vercel AI SDK
+          </a>
+          ,{" "}
+          <a
+            href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-black"
+          >
+            OpenAI GPT-3.5-turbo, and fine-tuned
+          </a>{" "}
+          on Halim's poetry.{" "}
+          <a
+            href="https://github.com/madihg/scam-ai-poet"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-black"
+          >
+            View the repo
+          </a>
+          .
+        </p>
       </div>
     </main>
   );
