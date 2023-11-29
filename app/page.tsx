@@ -14,9 +14,9 @@ import Textarea from "react-textarea-autosize";
 import Image from "next/image";
 
 const examples = [
-  "To be or not to be",
-  "All the world's a stage",
-  "What is the meaning of life?",
+  "Hi",
+  "I'm Amy, how's John doing today?",
+  "Alan, don't forget our appointment tomorrow.",
 ];
 
 export default function Chat() {
@@ -97,38 +97,38 @@ export default function Chat() {
               className="h-20 w-20"
             />
             <h1 className="text-lg font-semibold text-black">
-              Hi, I'm Shooketh!
+              Hi, I'm an AI clone of Halim!
             </h1>
             <p className="text-gray-500">
-              I'm an AI bot built with the{" "}
+              I'm part of a series of computational poetry experiments called{" "}
               <a
-                href="https://sdk.vercel.ai/docs"
+                href="https://www.oulipo.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
-                Vercel AI SDK
+                Oulipo.xyz
               </a>{" "}
-              and{" "}
+              . I was built using{" "}
               <a
                 href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
-                fine-tuned
+                GPT-4 fine-tuned
               </a>{" "}
-              on Shakespeare's literary works.
+              on poems from the book
               <br />
               <a
-                href="https://vercel.com/guides/fine-tuning-openai-nextjs"
+                href="https://www.amazon.com/Invasions-Poetry-Strike-Robotexts-Halims/dp/B0C644BZRZ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
-                Read the guide
+                Invasions by Halim Madi
               </a>{" "}
-              on how you can build your own bot like me.
+              .
             </p>
           </div>
           <div className="flex flex-col space-y-4 border-t border-gray-200 bg-gray-50 p-7 sm:p-10">
