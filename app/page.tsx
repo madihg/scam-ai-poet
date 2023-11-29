@@ -100,7 +100,7 @@ export default function Chat() {
               Hi, I'm an AI clone of Halim!
             </h1>
             <p className="text-gray-500">
-              I'm part of a series of computational poetry experiments called{" "}.
+              I'm part of a series of computational poetry experiments called{" "}
               <a
                 href="https://www.oulipo.xyz"
                 target="_blank"
@@ -108,7 +108,7 @@ export default function Chat() {
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
                 Oulipo.xyz
-              </a>{" "}
+              </a>{" "}.
               I was built using{" "}
               <a
                 href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
@@ -118,15 +118,15 @@ export default function Chat() {
               >
                 GPT-4 fine-tuned
               </a>{" "}
-              on poems from the book{" "}.
+              on poems from the book{" "}
               <a
                 href="https://www.amazon.com/Invasions-Poetry-Strike-Robotexts-Halims/dp/B0C644BZRZ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium underline underline-offset-4 transition-colors hover:text-black"
               >
-                Invasions by Halim Madi
-              </a>{" "}
+                Invasions by Halim
+              </a>{" "}.
             </p>
           </div>
           <div className="flex flex-col space-y-4 border-t border-gray-200 bg-gray-50 p-7 sm:p-10">
@@ -190,45 +190,6 @@ export default function Chat() {
             )}
           </button>
         </form>
-        <p className="text-center text-xs text-gray-400">
-          Built with{" "}
-          <a
-            href="https://sdk.vercel.ai/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-black"
-          >
-            Vercel AI SDK
-          </a>
-          ,{" "}
-          <a
-            href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-black"
-          >
-            OpenAI GPT-3.5-turbo, and fine-tuned
-          </a>{" "}
-          on Shakespeare's literary works .{" "}
-          <a
-            href="https://github.com/steven-tey/shooketh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-black"
-          >
-            View the repo
-          </a>{" "}
-          or{" "}
-          <a
-            href="https://vercel.com/templates/next.js/shooketh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-black"
-          >
-            deploy your own
-          </a>
-          .
-        </p>
       </div>
     </main>
   );
