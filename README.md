@@ -1,5 +1,4 @@
 <a href="www.halimmadi.com">
-  <img alt="Whomp – AI bot fine-tuned on Halim's poetry."
   <h1 align="center">Whomp</h1>
 </a>
 
