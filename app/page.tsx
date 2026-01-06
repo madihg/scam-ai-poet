@@ -4,20 +4,21 @@ import { useRef } from "react";
 import { useChat } from "ai/react";
 import clsx from "clsx";
 import {
-  VercelIcon,
-  GithubIcon,
   LoadingCircle,
   SendIcon,
   UserIcon,
 } from "./icons";
 import Textarea from "react-textarea-autosize";
-import Image from "next/image";
 
 const examples = [
   "Hi",
   "I'm Amy, how's John doing today?",
   "Alan, don't forget our appointment tomorrow.",
 ];
+
+const ASCII_ART = `▓░▒█▓░▒░█▓▒░█░▓▒░█▓░▒█▓░▒░█▓▒░█░▓▒░█▓░▒█▓░▒░█▓▒░█░▓▒░
+░█▒▓░█▒░▓█░▒▓█▒░▓░█▒▓░█▒░▓█░▒▓█▒░▓░█▒▓░█▒░▓█░▒▓█▒░▓░█
+▒░▓█▒░▓█░▒█▓░▒█▓▒░▓█▒░▓█░▒█▓░▒█▓▒░▓█▒░▓█░▒█▓░▒█▓▒░▓█▒`;
 
 export default function Chat() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -35,23 +36,7 @@ export default function Chat() {
   const disabled = isLoading || input.length === 0;
 
   return (
-    <main className="flex flex-col items-center justify-between pb-40">
-      <div className="absolute top-5 hidden w-full justify-between px-5 sm:flex">
-        <a
-          href="https://www.oulipo.xyz"
-          target="_blank"
-          className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
-        >
-          <VercelIcon />
-        </a>
-        <a
-          href="https://github.com/madihg/scam-ai-poet"
-          target="_blank"
-          className="rounded-lg p-2 transition-colors duration-200 hover:bg-stone-100 sm:bottom-auto"
-        >
-          <GithubIcon />
-        </a>
-      </div>
+    <main className="flex flex-col items-center justify-between pb-40" style={{ fontFamily: 'Courier, monospace' }}>
       {messages.length > 0 ? (
         messages.map((message, i) => (
           <div
@@ -72,12 +57,7 @@ export default function Chat() {
                 {message.role === "user" ? (
                   <UserIcon />
                 ) : (
-                  <Image
-                    src="/scam-poet.png"
-                    alt="scam-poet"
-                    width={36}
-                    height={36}
-                  />
+                  <span className="text-xs">▓░▒</span>
                 )}
               </div>
               <div className="prose prose-p:leading-relaxed mt-1 w-full break-words">
@@ -89,13 +69,9 @@ export default function Chat() {
       ) : (
         <div className="border-gray-200sm:mx-0 mx-5 mt-20 max-w-screen-md rounded-md border sm:w-full">
           <div className="flex flex-col space-y-4 p-7 sm:p-10">
-            <Image
-              src="/scam-poet.png"
-              alt="scam-poet"
-              width={40}
-              height={40}
-              className="h-20 w-20"
-            />
+            <pre className="text-xs sm:text-sm leading-tight text-gray-700 overflow-hidden whitespace-pre select-none" style={{ fontFamily: 'Courier, monospace' }}>
+{ASCII_ART}
+            </pre>
             <h1 className="text-lg font-semibold text-black">
               Hi, I'm an AI clone of Halim!
             </h1>
@@ -200,25 +176,15 @@ export default function Chat() {
           >
             Vercel AI SDK
           </a>
-          ,{" "}
+          , GPT-3.5-turbo fine-tuned on Halim's poetry.{" "}
           <a
-            href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
+            href="https://www.halimmadi.com"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-black"
           >
-            OpenAI GPT-3.5-turbo, and fine-tuned
-          </a>{" "}
-          on Halim's poetry.{" "}
-          <a
-            href="https://github.com/madihg/scam-ai-poet"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-black"
-          >
-            View the repo
+            halimmadi.com
           </a>
-          .
         </p>
       </div>
     </main>
