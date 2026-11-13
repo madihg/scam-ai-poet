@@ -90,15 +90,7 @@ export default function Chat() {
               >
                 Oulipo.xyz
               </a>.
-              I was built using{" "}
-              <a
-                href="https://openai.com/blog/gpt-3-5-turbo-fine-tuning-and-api-updates"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium underline underline-offset-4 transition-colors hover:text-black"
-              >
-                GPT-4 fine-tuned
-              </a>{" "}
+              I run on a small open-weight language model (4 billion parameters), fine-tuned{" "}
               on poems from the book{" "}
               <a
                 href="https://www.amazon.com/Invasions-Poetry-Strike-Robotexts-Halims/dp/B0C644BZRZ"
@@ -181,7 +173,7 @@ export default function Chat() {
           >
             Vercel AI SDK
           </a>
-          , GPT-3.5-turbo fine-tuned on Halim's poetry.{" "}
+          , a small open-weight model (4 billion parameters) fine-tuned on Halim's poetry.{" "}
           <a
             href="https://www.halimmadi.com"
             target="_blank"
