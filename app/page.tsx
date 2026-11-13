@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useChat } from "ai/react";
 import clsx from "clsx";
 import {
@@ -32,6 +32,11 @@ export default function Chat() {
       }
     },
   });
+
+  // Wake Whomp's server when the page opens, so the first answer comes from the trained voice.
+  useEffect(() => {
+    fetch("https://voices-gateway.vercel.app/warm").catch(() => {});
+  }, []);
 
   const disabled = isLoading || input.length === 0;
 

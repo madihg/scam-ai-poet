@@ -2,9 +2,12 @@
 import OpenAI from 'openai'
 import { OpenAIStream, StreamingTextResponse } from 'ai'
 
-// Create an OpenAI API client (that's edge friendly!)
+// Whomp no longer lives at OpenAI: the fine-tune was removed on 23 Oct 2026.
+// The voices gateway (repo madihg/voices, gateway/) speaks the same protocol and serves
+// Whomp from an open model, with fallbacks, so this route never has to change again.
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || ''
+  apiKey: process.env.VOICES_GATEWAY_KEY || '',
+  baseURL: process.env.VOICES_GATEWAY_URL || 'https://voices-gateway.vercel.app/v1'
 })
 
 // IMPORTANT! Set the runtime to edge
@@ -28,7 +31,7 @@ export async function POST(req: Request) {
 
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
-    model: 'ft:gpt-3.5-turbo-0613:personal:ai-poet:88GTGA7b',
+    model: 'whomp',
     stream: true,
     messages: [
       {
